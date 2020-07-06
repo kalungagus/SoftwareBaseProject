@@ -1,0 +1,156 @@
+  BaseProject.MainForm.resources - Embedded, ContainedInManifestFile, 
+ImageRuntimeVersion: v4.0.30319
+Assembly BaseProject, Version=0.0.*, Culture=Idioma Invariável (País Invariável): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Assembly System.Windows.Forms.DataVisualization, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35: 
+	hash=None, flags=None
+Assembly System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly System.Xml, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly Microsoft.VisualC.STLCLR, Version=2.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a: 
+	hash=None, flags=None
+Class CommDevices.receptionCallBack: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Byte[]): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Byte[], AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class CommDevices.CommLayer: AutoLayout, AnsiClass, Class, Public, Abstract, BeforeFieldInit
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.IO.Stream BaseStream 'get ' : 
+    CommDevices.CommLayerType CommType 'get ' : 
+    Boolean Connected 'get set' : 
+    Boolean CanWrite 'get ' : 
+    Boolean CanRead 'get ' : 
+    Int32 BytesToRead 'get ' : 
+  Methods:
+    get_BytesToRead(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CanRead(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CanWrite(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_Connected(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    set_Connected(Boolean(HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    get_CommType(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, SpecialName
+    get_BaseStream(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract, SpecialName
+    Write(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Read(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Open(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+    Close(): PrivateScope, Public, Virtual, HideBySig, VtableLayoutMask, Abstract
+Class CommDevices.USBDevice: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CommDevices.CommLayer
+    Void .ctor(System.String): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    System.IO.Stream BaseStream 'get ' : 
+    System.String COM 'get set' : 
+    Boolean Connected 'get set' : 
+    Boolean CanWrite 'get ' : 
+    Boolean CanRead 'get ' : 
+    Int32 BytesToRead 'get ' : 
+  Methods:
+    get_BytesToRead(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_CanRead(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_CanWrite(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_Connected(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_Connected(Boolean(HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_COM(): PrivateScope, Public, HideBySig, SpecialName
+    set_COM(String): PrivateScope, Public, HideBySig, SpecialName
+    get_BaseStream(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    getUSBDevicesList(): PrivateScope, Public, Static, HideBySig
+    Write(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    Read(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    Open(): PrivateScope, Public, Virtual, HideBySig
+    Close(): PrivateScope, Public, Virtual, HideBySig
+Class CommDevices.TCPIP4Device: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :CommDevices.CommLayer
+    Void .ctor(System.String, Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Interfaces:
+    System.IDisposable
+  Properties:
+    System.IO.Stream BaseStream 'get ' : 
+    Boolean Connected 'get set' : 
+    Int32 PortNumber 'get set' : 
+    System.String IP 'get set' : 
+    Boolean CanWrite 'get ' : 
+    Boolean CanRead 'get ' : 
+    Int32 BytesToRead 'get ' : 
+  Methods:
+    op_Equality(TCPIP4Device): PrivateScope, Public, HideBySig, SpecialName
+    op_Equality(String): PrivateScope, Public, HideBySig, SpecialName
+    op_Inequality(TCPIP4Device): PrivateScope, Public, HideBySig, SpecialName
+    op_Inequality(String): PrivateScope, Public, HideBySig, SpecialName
+    get_BytesToRead(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_CanRead(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_CanWrite(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_IP(): PrivateScope, Public, HideBySig, SpecialName
+    set_IP(String): PrivateScope, Public, HideBySig, SpecialName
+    get_PortNumber(): PrivateScope, Public, HideBySig, SpecialName
+    set_PortNumber(Int32): PrivateScope, Public, HideBySig, SpecialName
+    get_Connected(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    set_Connected(Boolean(HasFieldMarshal)): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    get_BaseStream(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    Write(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    Read(Byte[], Int32, Int32): PrivateScope, Public, Virtual, HideBySig
+    Open(): PrivateScope, Public, Virtual, HideBySig
+    Close(): PrivateScope, Public, Virtual, HideBySig
+    Dispose(): PrivateScope, Public, Final, Virtual, HideBySig
+Class Modules.ModuleReception: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Object, Byte[]): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Object, Byte[], AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class Modules.ModuleDisconnection: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.MulticastDelegate
+    Void .ctor(System.Object, IntPtr): PrivateScope, Public, SpecialName, RTSpecialName
+  Methods:
+    Invoke(Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    BeginInvoke(Object, AsyncCallback, Object): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+    EndInvoke(IAsyncResult): PrivateScope, Public, Final, Virtual, VtableLayoutMask
+Class Modules.Module: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(CommDevices.CommLayer): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    CommDevices.CommLayer Comm : Public
+    Modules.ModuleReception onReceive : Public
+    Modules.ModuleDisconnection onDisconnection : Public
+  Properties:
+    Int32 BytesToRead 'get ' : 
+    Boolean Connected 'get set' : 
+  Methods:
+    get_Connected(): PrivateScope, Public, HideBySig, SpecialName
+    set_Connected(Boolean(HasFieldMarshal)): PrivateScope, Public, HideBySig, SpecialName
+    get_BytesToRead(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    Open(): PrivateScope, Public, HideBySig
+    Close(): PrivateScope, Public, HideBySig
+    Write(Byte[], Int32, Int32): PrivateScope, Public, HideBySig
+    Read(Byte[], Int32, Int32): PrivateScope, Public, HideBySig
+    ReceptionService(): PrivateScope, Public, HideBySig
+Class Modules.Pin: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+    Void .ctor(Int32): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Properties:
+    Int32 ID   'get ' : 
+  Methods:
+    get_ID(): PrivateScope, Public, Virtual, HideBySig, SpecialName
+    ToString(): PrivateScope, Public, Virtual, HideBySig
+Class BaseProject.MainForm: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Forms.Form
+    Void .ctor(): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+Struct CommDevices.CommLayerType: AutoLayout, AnsiClass, Class, Public, Sealed, BeforeFieldInit
+  :System.Enum
+  Fields:
+    Int32 value__ : Public, SpecialName, RTSpecialName
+    CommDevices.CommLayerType USB = 0 : Public, Static, Literal, HasDefault
+    CommDevices.CommLayerType TCPIP4 = 1 : Public, Static, Literal, HasDefault

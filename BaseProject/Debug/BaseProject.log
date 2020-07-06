@@ -1,0 +1,10 @@
+﻿  EntryPoint.cpp
+c:\users\gustavo\projetos\_template\software\baseproject\baseproject\modules.h(211): warning C4490: 'override': uso incorreto de especificador de substituição; 'Modules::Module::BytesToRead::get' não corresponde a um método de ref class base
+  c:\users\gustavo\projetos\_template\software\baseproject\baseproject\modules.h(211): note: 'new' ou 'override' são permitidos apenas quando um método de base compatível de uma ref class existir
+c:\users\gustavo\projetos\_template\software\baseproject\baseproject\modules.h(349): warning C4490: 'override': uso incorreto de especificador de substituição; 'Modules::Pin::ID::get' não corresponde a um método de ref class base
+  c:\users\gustavo\projetos\_template\software\baseproject\baseproject\modules.h(349): note: 'new' ou 'override' são permitidos apenas quando um método de base compatível de uma ref class existir
+c:\users\gustavo\projetos\_template\software\baseproject\baseproject\mainform.h(992): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+c:\users\gustavo\projetos\_template\software\baseproject\baseproject\mainform.h(993): warning C4018: '<': incompatibilidade de signed/unsigned
+c:\users\gustavo\projetos\_template\software\baseproject\baseproject\mainform.h(1002): warning C4244: '=': conversão de 'double' para 'float', possível perda de dados
+  EntryPoint.obj : Módulo MSIL encontrado; vínculo incremental está desabilitado para MSIL; executando link completo
+  BaseProject.vcxproj -> C:\Users\Gustavo\Projetos\_Template\Software\BaseProject\Debug\BaseProject.exe
